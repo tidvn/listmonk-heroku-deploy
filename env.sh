@@ -12,4 +12,4 @@ export LISTMONK_DB__PORT=$(echo $DATABASE_URL | grep -oP "postgres://.*@.*:\K(\d
 export LISTMONK_DB__USER=$(echo $DATABASE_URL | grep -oP "postgres://\K(.+?):" | cut -d: -f1)
 export LISTMONK_DB__PASSWORD=$(echo $DATABASE_URL | grep -oP "postgres://.*:\K(.+?)@" | cut -d@ -f1)
 export LISTMONK_DB__DATABASE=$(echo $DATABASE_URL | grep -oP "postgres://.*@.*:.*/\K(.+?)$")
-export LISTMONK_DB__SSL_MODE="require"
+export LISTMONK_DB__SSL_MODE="disable"
