@@ -14,9 +14,12 @@
       "url": "https://github.com/knadh/listmonk-heroku"
     }
   ],
-  "addons": ["heroku-postgresql"],
-
   "env": {
+    "DATABASE_URL": {
+      "description": "Database Connection",
+      "required": true,
+      "value": ""
+    },
     "ROOT_URL": {
       "description": "URL of the installation",
       "required": true,
